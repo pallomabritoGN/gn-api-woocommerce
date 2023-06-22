@@ -29,6 +29,8 @@ define( 'GERENCIANET_OFICIAL_VERSION', '2.1.0' );
 define( 'GERENCIANET_BOLETO_ID', 'WC_Gerencianet_Boleto' );
 define( 'GERENCIANET_CARTAO_ID', 'WC_Gerencianet_Cartao' );
 define( 'GERENCIANET_PIX_ID', 'WC_Gerencianet_Pix' );
+define( 'GERENCIANET_OPEN_FINANCE_ID', 'WC_Gerencianet_Open_Finance' );
+
 
 
 /**
