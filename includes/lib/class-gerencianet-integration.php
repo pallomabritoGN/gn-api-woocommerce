@@ -431,4 +431,25 @@ class Gerencianet_Integration {
 
 		return $formated;
 	}
+
+	public function get_participants() {
+		$response = false;
+		try {
+			$api      = new Gerencianet( $this->get_credentials( GERENCIANET_OPEN_FINANCE_ID ) );
+			$data     = $api->ofListParticipants();
+			$response = true;
+		} catch ( GerencianetException $e ) {
+			$data = array(
+				'code'    => $e->getCode(),
+				'error'   => $e->error,
+				'message' => $e->errorDescription,
+			);
+		} catch ( Exception $e ) {
+			$data = array( 'message' => $e->getMessage() );
+		}
+
+		return self::result_api( $data, $response );
+	}
+
+
 }
